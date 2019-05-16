@@ -1,0 +1,20 @@
+@import 'theme/main';
+
+.internetConnectionCheck {
+	background: $red;
+	color: white;
+	font-size: $font-md;
+	padding: 10px 0px;
+	text-align: center;
+	position: fixed;
+	z-index: 9999;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+}
+.messageBody {
+	background-color: transparent;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+}

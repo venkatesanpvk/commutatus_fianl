@@ -1,0 +1,22 @@
+export const mariner = 'rgb(255, 204, 0)';
+export const bigStone = '#393C52';
+export const buttonTextColor = '#4a4a4a';
+export const buttonPrimaryColor = '#120047';
+export const buttonSecondaryColor = '#ff8000';
+export const buttonRipple = '#4c4c4c';
+export const deepCerise = '#37175a';
+export const darkBlack = '#000';
+export const lightBlue = '#87ceeb';
+export const darkWhite = '#fff';
+export const darkOrange = '#fc7d00';
+export const pickerText = '#120047';
+export const darkBlue = '#4166b2';
+export const darkRed = '#bd081c';
+export const buttonbg = '#ffcc00';
+export const buttonBorder = '#ff8000';
+export const disablebtn = '#928fb3';
+
+export const fontQsregular = 'quicksandregular,sans-serif';
+export const fontQslight = 'quicksandlight,sans-serif';
+export const fontQsbold = 'quicksandbold,sans-serif';
+export const nunitobold = 'nunitobold,sans-serif';

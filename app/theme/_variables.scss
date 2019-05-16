@@ -1,0 +1,119 @@
+// Font family
+$fa-font-path: "~font-awesome/fonts";
+$font-path:"assets/fonts" !default;
+$relative-path:"assets/images" !default;
+$font-awesome: "Font Awesome 5 Free";
+$line-awesome:"~line-awesome/fonts";
+
+$font-qsbold:'quicksandbold',sans-serif;
+$font-qslight:'quicksandlight',sans-serif;
+$font-qsmedium:'quicksandmedium',sans-serif;
+$font-qsregular:'quicksandregular',sans-serif;
+$font-futura:'futuracondensedmedium',sans-serif;
+$font-futuralight:'futuracondensedlight',sans-serif;
+$nunito-bold: 'nunitobold',sans-serif;
+$nunitosemiBold: 'nunitosemiBold',sans-serif;
+$gothamroundedmedium: 'gothamroundedmedium',sans-serif;
+$gothamrounded-book: 'gothamroundedbook',sans-serif;
+$nunitoregular:'nunitoregular',sans-serif;
+$lineawesome: 'lineawesome',sans-serif;
+$robotobold: 'robotobold',sans-serif;
+
+// Colors
+$black:#000000;
+$red:#c62817;
+$gold:#d4b675;
+$white:#ffffff;
+$skyBlue: #87ceeb;
+$skyBlue1: #91d8f7;
+$grey: #c1c0c0;
+$whiteSmoke:#fcfbfb;
+$body-bg:$whiteSmoke;
+$navLinkColor: #656673;
+$lightGrey:#d5d5d5;
+$green: #417505;
+$subBg: #f5f5f9;
+$introBg: #2b0058;
+$secondaryBg: #f1f0f4;
+$barBg: #e3e2f1;
+$barGradient1: #640094;
+$barGradient2: #110a44;
+$green: #7ed321;
+// DFL color
+$hawkesblue: #e4f1fd;
+$dodgerblue: #3fa2f7;
+$mariner: #297fca;
+$darkorange: #ff8000;
+$namecoralred: #ff4050;
+$navy: #120047;
+$scampi: #6f6b99;
+$namecharcoal: #4a4a4a;
+$tangerineyellow: #ffcc00;
+$Indigo: #3c0066;
+$malachite: #ff5500;
+$prussianblue: #d0021b;
+$midnightBlue: #f1fafe;
+$salmon: #FF6B6B;
+$green:#32c24d;
+$borderColor: #dddce2;
+$darkLavender: #6f6b99;
+$disabledColor: #d4d5d6;
+$yellow:#ffd300;
+
+// Font sizes
+$font-xsm:10px;
+$font-sm:12px;
+$font-md:14px;
+$font-msd:15px;
+$font-lmd:16px;
+$font-xmd:18px;
+$font-ama:20px;
+$font-ame:24px;
+$font-amf:25px;
+$font-bma:30px;
+$font-bmd:34px;
+$font-cma:40px;
+$font-dmh:48px;
+$font-ema:50px;
+$font-eme:54px;
+$font-fma:60px;
+
+
+// Form controls
+$fm-border-thickness:1px;
+$fm-border-color:$hawkesblue;
+$fm-focus-outline:#313f42;
+$fm-flt-label-bg: $white;
+$fm-flt-label-color:#c1c0c0;
+$globalErrorBgColor:#f22048;
+$input-height:50px;
+$fm-focus-outline-error:$black;
+$form-error-label-bg: $red;
+$secondaryInput: #F4F4F7;
+$tableTitle: #7a76a3;
+$skyBlue1: rgba(145,216,247, 0.15);
+
+
+//Button
+
+$button-bg: $tangerineyellow;
+$button-text: $namecharcoal;
+
+
+// checkbox
+$checkedCheckBoxBgColor:$skyBlue;
+$checkedCloseColor:$red;
+
+//No Child
+$dashedLine:#FF6B6B;
+
+$link-color: $darkorange;
+//card gradient
+$cardGradient:#7D7A59;
+
+//Pagination
+$paginationColor:#F59700;
+$paginationTextColor:#BAB7D9;
+//Title desc
+$titleWrapperDesc:#00003F;
+$easeInSine:cubic-bezier(0.470, 0.000, 0.745, 0.715);

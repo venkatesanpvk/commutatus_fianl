@@ -1,0 +1,148 @@
+@import 'theme/variables';
+@import 'theme/fonts';
+@import 'theme/mixins';
+
+html, body, p, h1, h2, h3, h4, h5, h6, form, ol, ul {
+	padding:0px;
+	margin:0px;
+}
+
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  color: $dodgerblue;
+}
+body {
+	background-color:$white;
+  -webkit-font-smoothing: antialiased;
+	color: $navy;
+	font:{
+    family: $nunitosemiBold;
+		size:$font-xmd;
+		weight: normal;
+	};
+}
+button, input {
+  &:focus {
+    outline:none
+  }
+}
+a {
+  color: $link-color !important;
+  cursor: pointer;
+  font:{
+  	family: $nunito-bold;
+  }
+  @include transition-property(all);
+  @include transition-duration(.2s);
+  @include transition-timing-function(linear);
+  &:hover, &:focus{
+    color: $navy;
+    outline:none;
+    text-decoration: none;
+  }
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+ul, ol {
+	list-style:none;
+}
+h2{
+  font:{
+    size: $font-eme;
+    family: $nunito-bold;
+  }
+  color: $darkorange;
+  letter-spacing: -2.1px;
+  line-height: 58px;
+  padding-bottom: 17px;
+}
+h3 {
+  font:{
+    size: $font-ame;
+  }
+  line-height: 58px;
+}
+h3,h4 {
+    letter-spacing: -0.9px;
+}
+h4 {
+  line-height: 58px;
+  font:{
+    size: 24px;
+  }
+}
+
+h2,h3,h4,h5,h6{
+ color: $namecoralred;
+}
+p {
+  padding-bottom: 15px;
+  line-height: 24px;
+  opacity: 0.8;
+}
+header {
+  height: 85px;
+  position: relative;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline:none;
+}
+::-webkit-input-placeholder {
+  font:{
+    family: $nunitosemiBold;
+    size: $font-md;
+  }
+  color: $scampi;
+  letter-spacing: -0.2px;
+  opacity: 0.9;
+}
+
+.errorContent {
+  width: 269px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.primaryBtn {
+  box-shadow: 4px 4px 0 0 #ff5500;
+  border-radius: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: $font-bmd;
+    line-height: 48px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h2 {
+    padding-bottom:30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    @include position(absolute,$top: 0px);
+    height: 25px;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  h3 {
+    line-height: 27px;
+    padding-bottom: 7px;
+  }
+  h2 {
+    padding-bottom: 5px;
+  }
+}

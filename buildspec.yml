@@ -1,0 +1,28 @@
+version: 0.2
+phases:
+ install:
+   commands:
+     - sed -i "s/api_host/https:\/\/devapi.ninocity.com/g" webpack.config.js;
+     - sed -i "s/redirect_url/https:\/\/dev.ninocity.com/g" webpack.config.js;
+     - sed -i "s/cognito_region/eu-west-2/g" webpack.config.js;
+     - sed -i "s/cognito_host/https:\/\/ninocitydev.auth.eu-west-2.amazoncognito.com/g" webpack.config.js;
+     - sed -i "s/cognito_user_pool_id/eu-west-2_Y67UfvIpq/g" webpack.config.js;
+     - sed -i "s/cognito_app_client_id/377v1cvi5vt0vg5pj13i34hpi3/g" webpack.config.js;
+     - sed -i "s/payment_key/pk_test_eQwSG3Ku29Z8hvbzhyhTfSw0/g" webpack.config.js;
+     - sed -i "s/getAddress_key/JYzXscrhGkSggebh-w2TGg14797/g" webpack.config.js;
+     
+
+ build:
+   commands:
+     - rm -rf src/node_modules
+     - rm -rf package-lock.json
+     - npm install
+     - npm run build
+     - zip -r nc-web-dev.zip .
+     - aws s3 cp nc-web-dev.zip s3://nc-web/
+ post_build:
+   commands: 
+     - echo Build completed on `date`
+artifacts:
+  files: 
+  - '**/*'

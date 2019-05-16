@@ -1,0 +1,148 @@
+@import "./node_modules/compass-mixins/lib/compass/css3";
+
+%sprite {
+	background-image:url('assets/images/sprite.png');
+	background-repeat: no-repeat;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin clip-path($clip) {
+  -webkit-clip-path: $clip;
+  -moz-clip-path: $clip;
+  -ms-clip-path: $clip;
+  clip-path: $clip;
+}
+
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin backface-visibility {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+}
+
+@mixin width-height($width, $height){
+    width:$width;
+    height:$height;
+}
+
+@mixin bg-positions($repeat:no-repat, $align:left top, $size:cover) {
+  background-repeat:$repeat;
+  background-position:$align;
+  @include background-size($size);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin transition-event($props:all, $duration:0.15s, $timing:linear) {
+    @include transition-property($props);
+    @include transition-duration($duration);
+    @include transition-timing-function($timing);
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin css-triangle($color, $size){
+   border-left: $size solid transparent;
+   border-right: $size solid transparent;
+   border-bottom: $size solid $color;
+}
+
+@mixin bottom-left($bottom, $left) {
+    bottom: $bottom;
+    left: $left; 
+}
+
+@mixin right-top($right, $top) {
+    right: $right;
+    top:$top; 
+}
+
+@mixin transition-event($props:all, $duration:0.15s, $timing:linear) {
+  @include transition-property($props);
+  @include transition-duration($duration);
+  @include transition-timing-function($timing);
+}
+
+// Animation
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+/*checkbox*/
+@include keyframes(checkbox-check) {
+  0% {
+      width: 0;
+      height: 0;
+      border-color: $white;
+      transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+   33% {
+       width: 6px;
+       height: 0;
+       transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  100% {
+      width: 6px;
+      height: 9px;
+      border-color: $white;
+      transform: translate3d(0, -9px, 0) rotate(45deg);
+  }
+}
